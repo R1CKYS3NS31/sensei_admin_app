@@ -1,10 +1,10 @@
-import './home.css'
+import React from 'react'
+import FeaturedInfo from '../../featuredInfo/FeaturedInfo'
 
-export default function 
-() {
+export default function Home() {
   return (
     <div className="home">
-        Home
+        <FeaturedInfo />
     </div>
   )
 }

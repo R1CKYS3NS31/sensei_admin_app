@@ -1,5 +1,5 @@
 
-import { Business, Feedback, LineStyle, Mail, Message, Money, Person, Report, Shop, Timeline, TrendingUp, WorkOutline } from '@material-ui/icons'
+import { Feedback, LineStyle, Mail, Message, Money, Person, Report, Shop, Timeline, TrendingUp, WorkOutline } from '@material-ui/icons'
 import './sidebar.css'
 
 export default function SideBar() {
