@@ -8,7 +8,7 @@ export default function WidgetLg() {
   return (
     <div className="widgetSm">
       <h3 className="widgetLgTitle">Latest Transactions</h3>
-      <tanle className="widgetLgTable">
+      <table className="widgetLgTable">
         <tr className="widgetLgTr">
           <th className="widgetLgTh">Customer</th>
           <th className="widgetLgTh">Date</th>
@@ -77,7 +77,7 @@ export default function WidgetLg() {
             <Button type="Approved" />
           </td>
         </tr>
-      </tanle>
+      </table>
     </div>
   );
 }
