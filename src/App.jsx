@@ -17,7 +17,7 @@ function App() {
           <Route path={"/"} exact>
             <Home/>
           </Route>
-          <Route path={"users"}>
+          <Route path={"/users"}>
             <UserList/>
           </Route>
            
