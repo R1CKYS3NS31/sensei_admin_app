@@ -26,12 +26,7 @@ export default function WidgetLg() {
             <Button type="Approved" />
           </td>
         </tr>
-        <tr className="widgetLgTr">
-          <th className="widgetLgTh">Customer</th>
-          <th className="widgetLgTh">Date</th>
-          <th className="widgetLgTh">Amount</th>
-          <th className="widgetLgTh">Status</th>
-        </tr>
+       
         <tr className="widgetLgTr">
           <td className="widgetLgUser">
             <img src="sensei.png" alt="" className="widgetLgImg" />
@@ -43,12 +38,7 @@ export default function WidgetLg() {
             <Button type="Declined"/>
           </td>
         </tr>
-        <tr className="widgetLgTr">
-          <th className="widgetLgTh">Customer</th>
-          <th className="widgetLgTh">Date</th>
-          <th className="widgetLgTh">Amount</th>
-          <th className="widgetLgTh">Status</th>
-        </tr>
+       
         <tr className="widgetLgTr">
           <td className="widgetLgUser">
             <img src="sensei.png" alt="" className="widgetLgImg" />
@@ -60,12 +50,7 @@ export default function WidgetLg() {
             <Button type="Pending" />
           </td>
         </tr>
-        <tr className="widgetLgTr">
-          <th className="widgetLgTh">Customer</th>
-          <th className="widgetLgTh">Date</th>
-          <th className="widgetLgTh">Amount</th>
-          <th className="widgetLgTh">Status</th>
-        </tr>
+       
         <tr className="widgetLgTr">
           <td className="widgetLgUser">
             <img src="sensei.png" alt="" className="widgetLgImg" />

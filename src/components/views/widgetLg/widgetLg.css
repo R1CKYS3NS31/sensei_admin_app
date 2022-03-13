@@ -28,6 +28,9 @@
     object-fit: cover;
     margin-right: 10px;
 }
+.widgetLgDate, .widgetLgAmount, .widgetLgStatus{
+    font-size: 300;
+}
 .widgetLgButton{
     padding: 5px 7px;
     border: none;
