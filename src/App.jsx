@@ -5,6 +5,7 @@ import SideBar from './components/views/sidebar/SideBar';
 import Topbar from './components/views/topbar/Topbar';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import UserList from './components/views/pages/userList/UserList';
+import { userRows } from './components/model/DummyData';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
             <Home/>
           </Route>
           <Route path={"/users"}>
-            <UserList/>
+            <UserList rows={userRows}/>
           </Route>
            
         </Switch>

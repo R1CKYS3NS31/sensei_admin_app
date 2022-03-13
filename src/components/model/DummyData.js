@@ -55,3 +55,45 @@ export const userData = [
     },
   ];
 
+export const userRows = [
+  {
+    id: 1,
+    username: "Ricky Sensei",
+    avatar: "sensei.png",
+    email: "sensei@gmail.com",
+    status: "active",
+    transaction: "ksh. 234.00",
+  },
+  {
+    id: 2,
+    username: "Ricky Sensei",
+    avatar: "sensei.png",
+    email: "sensei@gmail.com",
+    status: "active",
+    transaction: "ksh. 234.00",
+  },
+  {
+    id: 3,
+    username: "Ricky Sensei",
+    avatar: "sensei.png",
+    email: "sensei@gmail.com",
+    status: "active",
+    transaction: "ksh. 234.00",
+  },
+  {
+    id: 4,
+    username: "Ricky Sensei",
+    avatar: "sensei.png",
+    email: "sensei@gmail.com",
+    status: "active",
+    transaction: "ksh. 234.00",
+  },
+  {
+    id: 5,
+    username: "Ricky Sensei",
+    avatar: "sensei.png",
+    email: "sensei@gmail.com",
+    status: "active",
+    transaction: "ksh. 234.00",
+  },
+];

@@ -2,7 +2,7 @@ import "./userList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 
-export default function UserList() {
+export default function UserList({rows}) {
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {
@@ -58,49 +58,6 @@ export default function UserList() {
             )
         }
       },
-  ];
-
-  const rows = [
-    {
-      id: 1,
-      username: "Ricky Sensei",
-      avatar: "sensei.png",
-      email: "sensei@gmail.com",
-      status: "active",
-      transaction: "ksh. 234.00",
-    },
-    {
-      id: 2,
-      username: "Ricky Sensei",
-      avatar: "sensei.png",
-      email: "sensei@gmail.com",
-      status: "active",
-      transaction: "ksh. 234.00",
-    },
-    {
-      id: 3,
-      username: "Ricky Sensei",
-      avatar: "sensei.png",
-      email: "sensei@gmail.com",
-      status: "active",
-      transaction: "ksh. 234.00",
-    },
-    {
-      id: 4,
-      username: "Ricky Sensei",
-      avatar: "sensei.png",
-      email: "sensei@gmail.com",
-      status: "active",
-      transaction: "ksh. 234.00",
-    },
-    {
-      id: 5,
-      username: "Ricky Sensei",
-      avatar: "sensei.png",
-      email: "sensei@gmail.com",
-      status: "active",
-      transaction: "ksh. 234.00",
-    },
   ];
 
   return (
