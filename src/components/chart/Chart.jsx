@@ -1,17 +1,15 @@
 import "./chart.css";
-import React, { PureComponent } from "react";
+import React from "react";
 import {
   LineChart,
   Line,
   XAxis,
-  YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
-export default function Chart() {
+export default function Chart({title,data,dataKey,grid}) {
   const data = [
     {
       name: "Jan",
@@ -77,7 +75,7 @@ export default function Chart() {
           <XAxis dataKey={"name"} stroke="#5550bd"/>
           <Line type={"monotone"} dataKey="Active User" stroke="#5550bd"/>
           <Tooltip/>
-          <CartesianGrid stroke="#e0dfdf"/>
+          { grid && <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />}
         </LineChart>
       </ResponsiveContainer>
     </div>
