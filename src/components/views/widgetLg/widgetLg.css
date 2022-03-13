@@ -3,5 +3,31 @@
   -webkit-box-shadow: 0px 0px 11px -1px #000000;
   box-shadow: 0px 0px 11px -1px #928d8d;
   padding: 20px;
-  margin-right: 20px;
+  
+}
+.widgetLgTitle{
+    font-size: 22px;
+    font-weight: 600;
+}
+.widgetLgImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.widgetLgButton{
+    padding: 5px 7px;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+}
+.widgetLgButton.Approved{
+    background-color: #e5faf2;
+    color: #3bb077;
+}
+.widgetLgButton.Declined{
+    background-color: #d95087;
+}
+.widgetLgButton.Pending{
+    background-color: #2a7ade;
 }
