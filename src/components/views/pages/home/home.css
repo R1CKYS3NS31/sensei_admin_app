@@ -2,3 +2,7 @@
     flex: 4;
     /* background-color: darkcyan; */
   }
+.homeWidget{
+  display: flex;
+  margin: 20px;
+}
