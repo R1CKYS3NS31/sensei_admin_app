@@ -4,6 +4,7 @@ import Chart from '../../chart/Chart'
 import FeaturedInfo from '../../featuredInfo/FeaturedInfo'
 import WidgetLg from '../../widgetLg/WidgetLg'
 import WidgetSM from '../../widgetSm/WidgetSM'
+import  './home.css'
 
 export default function Home() {
   return (
