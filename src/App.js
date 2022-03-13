@@ -1,8 +1,9 @@
 
 import './App.css';
-import Home from './components/pages/home/Home';
-import SideBar from './components/sidebar/SideBar';
-import Topbar from './components/topbar/Topbar';
+import Home from './components/views/pages/home/Home';
+
+import SideBar from './components/views/sidebar/SideBar';
+import Topbar from './components/views/topbar/Topbar';
 
 function App() {
   return (
