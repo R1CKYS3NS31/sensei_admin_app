@@ -75,3 +75,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ```
 yarn add @material-ui/icons @material-ui/core recharts
 ```
+#### user
+```
+npm i react-router-dom@5.3.0
+```
+intead of latest one for Switch to work

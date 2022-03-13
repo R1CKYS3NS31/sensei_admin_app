@@ -1,21 +1,26 @@
 
 import './App.css';
 import Home from './components/views/pages/home/Home';
-
 import SideBar from './components/views/sidebar/SideBar';
 import Topbar from './components/views/topbar/Topbar';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+
 
 function App() {
   return (
-    <div>
+    <Router>
       <Topbar/>
       <div className="container">
         <SideBar/>
-        <Home/>
+        <Switch>
+           <Home/>
+        </Switch>
+       
       </div>
       
-      
-    </div>
+    
+    </Router>
+    
   );
 }
 
