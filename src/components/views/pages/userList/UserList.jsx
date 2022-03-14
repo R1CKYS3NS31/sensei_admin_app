@@ -1,15 +1,18 @@
 import "./userList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
-export default function UserList({rows}) {
+export default function UserList({ rows }) {
+  const [data, setData] = useState(rows)
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {
       field: "user",
       headerName: "User",
       width: 200,
-      editable: true,
+      editable: false,
       renderCell: (params) => {
         return (
           <div className="userListUser">
@@ -27,7 +30,7 @@ export default function UserList({rows}) {
       field: "email",
       headerName: "Email",
       width: 150,
-      editable: true,
+      editable: false
     },
     {
       field: "status",
@@ -39,31 +42,30 @@ export default function UserList({rows}) {
       field: "transaction",
       headerName: "Transaction Volume",
       width: 160,
-      editable: true,
+      editable: false,
     },
     {
-        field: "action",
-        headerName: "Action",
-        width: 160,
-        editable: true,
-        renderCell:(params)=>{
-            return (
-                <>
-                <button className="userListEdit">
-                    Edit
-                </button>
-                <DeleteOutline className="userListDelete"/>
-                </>
-                
-            )
-        }
+      field: "action",
+      headerName: "Action",
+      width: 160,
+      editable: false,
+      renderCell: (params) => {
+        return (
+          <>
+            <Link to={"/user/"+params.row.id}>
+            <button className="userListEdit">Edit</button>
+            </Link>
+            <DeleteOutline className="userListDelete" />
+          </>
+        );
       },
+    },
   ];
 
   return (
     <div className="userList">
       <DataGrid
-        rows={rows}
+        rows={data}
         columns={columns}
         pageSize={5}
         checkboxSelection
