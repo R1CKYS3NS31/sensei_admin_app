@@ -1,5 +1,6 @@
 
-import { Feedback, LineStyle, Mail, Message, Money, Person, Report, Shop, Timeline, TrendingUp, WorkOutline } from '@material-ui/icons'
+import { Feedback, LineStyle, Mail, Message, Money, Person, Report, Storefront, Timeline, TrendingUp, WorkOutline } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 import './sidebar.css'
 
 export default function SideBar() {
@@ -33,14 +34,19 @@ export default function SideBar() {
                         Quick Menu
                     </h3>
                     <ul className="sidebarList">
-                        <li className="sidebarListItem">
+                        <Link to={"users"} className="link">
+                             <li className="sidebarListItem">
                             <Person className='sidebarIcon'/>
                             Users
                         </li>
-                        <li className="sidebarListItem">
-                            <Shop className='sidebarIcon'/>
+                        </Link>
+                       <Link to={"products"} className="link">
+                           <li className="sidebarListItem">
+                            <Storefront className='sidebarIcon'/>
                             Products
                         </li>
+                       </Link>
+                        
                         <li className="sidebarListItem">
                             <Money className='sidebarIcon'/>
                             Transactions
