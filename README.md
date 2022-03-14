@@ -72,6 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Sensei Admin App
 
 #### install
+react.js
+recharts
+@material/core,.../icons.../data-grid
 ```
 yarn add @material-ui/icons @material-ui/core recharts
 ```
