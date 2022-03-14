@@ -1,6 +1,10 @@
 .userList{
     flex: 4;
 }
+.userTable{
+    width: 100%;
+    border-spacing: 20px;
+}
 .userListUser{
     display: flex;
     align-items: center;

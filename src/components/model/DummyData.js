@@ -55,6 +55,26 @@ export const userData = [
     },
   ];
 
+// product data
+export const productData=[
+  {
+    name: "Jan",
+    "Sales": 4000,
+   
+  },
+  {
+    name: "Feb",
+    "Sales": 7000,
+
+  },
+  {
+    name: "Mar",
+    "Sales": 4600,
+  
+  },
+]
+
+// users
 export const userRows = [
   {
     id: 1,
@@ -96,4 +116,89 @@ export const userRows = [
     status: "active",
     transaction: "ksh. 234.00",
   },
+];
+
+// products
+export const productRows = [
+  {
+    id: 1,
+    name: "Apple Airpods",
+    img: "sensei.png",
+    stock: 144,
+    status: "active",
+    price: "ksh. 234.00",
+  },
+  {
+    id: 2,
+    name: "Apple Airpods",
+    img: "sensei.png",
+    stock: 144,
+    status: "active",
+    price: "ksh. 234.00",
+  },
+  {
+    id: 3,
+    name: "Apple Airpods",
+    img: "sensei.png",
+    stock: 144,
+    status: "active",
+    price: "ksh. 234.00",
+  },
+  {
+    id: 4,
+    name: "Apple Airpods",
+    img: "sensei.png",
+    stock: 144,
+    status: "active",
+    price: "ksh. 234.00",
+  },
+  {
+    id: 5,
+    name: "Apple Airpods",
+    img: "sensei.png",
+    stock: 144,
+    status: "active",
+    price: "ksh. 234.00",
+  },
+  {
+    id: 6,
+    name: "Apple Airpods",
+    img: "sensei.png",
+    stock: 144,
+    status: "active",
+    price: "ksh. 234.00",
+  },
+  {
+    id: 7,
+    name: "Apple Airpods",
+    img: "sensei.png",
+    stock: 144,
+    status: "active",
+    price: "ksh. 234.00",
+  },
+  {
+    id: 8,
+    name: "Apple Airpods",
+    img: "sensei.png",
+    stock: 144,
+    status: "active",
+    price: "ksh. 234.00",
+  },
+  {
+    id: 9,
+    name: "Apple Airpods",
+    img: "sensei.png",
+    stock: 144,
+    status: "active",
+    price: "ksh. 234.00",
+  },
+  {
+    id: 10,
+    name: "Apple Airpods",
+    img: "sensei.png",
+    stock: 144,
+    status: "active",
+    price: "ksh. 234.00",
+  },
+  
 ];

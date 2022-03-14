@@ -5,10 +5,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function UserList({ rows }) {
-
   const [data, setData] = useState(rows);
 
-  
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
@@ -75,6 +73,7 @@ export default function UserList({ rows }) {
   return (
     <div className="userList">
       <DataGrid
+        className="userTable"
         rows={data}
         columns={columns}
         pageSize={5}
