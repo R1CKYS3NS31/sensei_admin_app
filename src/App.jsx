@@ -6,6 +6,7 @@ import Topbar from './components/views/topbar/Topbar';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import UserList from './components/views/pages/userList/UserList';
 import { userRows } from './components/model/DummyData';
+import User from './components/views/pages/user/User';
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path={"/users"}>
             <UserList rows={userRows}/>
+          </Route>
+          <Route path={"/user/:userId"}>
+            <User/>
           </Route>
            
         </Switch>
