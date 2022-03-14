@@ -1,38 +1,35 @@
-
-import './App.css';
-import Home from './components/views/pages/home/Home';
-import SideBar from './components/views/sidebar/SideBar';
-import Topbar from './components/views/topbar/Topbar';
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
-import UserList from './components/views/pages/userList/UserList';
-import { userRows } from './components/model/DummyData';
-import User from './components/views/pages/user/User';
-
+import "./App.css";
+import Home from "./components/views/pages/home/Home";
+import SideBar from "./components/views/sidebar/SideBar";
+import Topbar from "./components/views/topbar/Topbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import UserList from "./components/views/pages/userList/UserList";
+import { userRows } from "./components/model/DummyData";
+import User from "./components/views/pages/user/User";
+import NewUser from "./components/views/pages/newUser/NewUser";
 
 function App() {
   return (
     <Router>
-      <Topbar/>
+      <Topbar />
       <div className="container">
-        <SideBar/>
+        <SideBar />
         <Switch>
           <Route path={"/"} exact>
-            <Home/>
+            <Home />
           </Route>
           <Route path={"/users"}>
-            <UserList rows={userRows}/>
+            <UserList rows={userRows} />
+          </Route>
+          <Route path={"/newUser"}>
+            <NewUser />
           </Route>
           <Route path={"/user/:userId"}>
-            <User/>
+            <User />
           </Route>
-           
         </Switch>
-       
       </div>
-      
-    
     </Router>
-    
   );
 }
 

@@ -1,4 +1,5 @@
-import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid } from "@material-ui/icons";
+import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 import "./user.css";
 
 export default function User() {
@@ -6,7 +7,10 @@ export default function User() {
     <div className="user">
       <div className="userTitleContainer">
         <h1 className="userTitle">Edit User</h1>
+        <Link to={"/newUser"}>
         <button className="userAddButton">Create</button>
+        </Link>
+        
       </div>
       <div className="userContainer">
         <div className="userShow">
@@ -43,30 +47,39 @@ export default function User() {
             </div>
           </div>
         </div>
+        {/* edit user */}
         <div className="userUpdate">
           <span className="userUpdateTitle">Edit</span>
           <form className="userUpdateForm">
             <div className="userUpdateLeft">
               <div className="userUpdateItem">
                 <label htmlFor="username">Username</label>
-                <input type="text" className="userUpdateInput" placeholder="username"/>
+                <input type="text" className="userUpdateInput" placeholder="username" required/>
               </div>
               <div className="userUpdateItem">
-                <label htmlFor="username">Full Name</label>
-                <input type="text" className="userUpdateInput" placeholder="full name"/>
+                <label htmlFor="fullname">Full Name</label>
+                <input type="text" className="userUpdateInput" placeholder="full name" required/>
               </div>
               <div className="userUpdateItem">
-                <label htmlFor="username">Email</label>
-                <input type="text" className="userUpdateInput" placeholder="email@gmail.com"/>
+                <label htmlFor="email">Email</label>
+                <input type="email" className="userUpdateInput" placeholder="email@gmail.com" required/>
               </div>
               <div className="userUpdateItem">
-                <label htmlFor="username">Phone</label>
-                <input type="telephone" className="userUpdateInput" placeholder="+254700 000 000"/>
+                <label htmlFor="phone">Phone</label>
+                <input type="tel" className="userUpdateInput" placeholder="+254700 000 000" required/>
               </div>
               <div className="userUpdateItem">
-                <label htmlFor="username">Address</label>
-                <input type="text" className="userUpdateInput" placeholder="City,Country"/>
+                <label htmlFor="address">Address</label>
+                <input type="text" className="userUpdateInput" placeholder="City,Country" required/>
               </div>
+            </div>
+            <div className="userUpdateRight">
+              <div className="userUpdateUpload">
+                <img src="/sensei.png" alt="user img upload" className="userUpdateImg" />
+                <label htmlFor="file"><Publish className="userUpdateIcon"/></label>
+                <input type="file" name="" id="file" style={{display:"none"}} required/>
+              </div>
+              <button className="userUpdateButton">Update</button>
             </div>
           </form>
         </div>
