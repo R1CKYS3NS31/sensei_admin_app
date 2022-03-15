@@ -1,8 +1,10 @@
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// components
 import Home from "./components/views/pages/home/Home";
 import SideBar from "./components/views/sidebar/SideBar";
 import Topbar from "./components/views/topbar/Topbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import UserList from "./components/views/pages/userList/UserList";
 import { productRows, userRows } from "./components/model/DummyData";
 import User from "./components/views/pages/user/User";
