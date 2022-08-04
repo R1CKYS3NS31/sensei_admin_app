@@ -83,3 +83,19 @@ yarn add @material-ui/icons @material-ui/core recharts
 npm i react-router-dom@5.3.0
 ```
 intead of latest one for Switch to work
+
+### Serve
+```
+$ npmi i serve --save 
+```
+create db.json
+
+save in package.json
+```
+ "serve": "json-server --watch db.json --port 5000"
+```
+ 
+start server
+```
+node serve
+```

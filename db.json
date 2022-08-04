@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple Airpods",
+      "img": "sensei.png",
+      "stock": 144,
+      "status": "active",
+      "price": 234.00,
+    },
+    {
+      "id": 1,
+      "name": "Apple Airpods",
+      "img": "sensei.png",
+      "stock": 144,
+      "status": "active",
+      "price": 234.00,
+    },
+    {
+      "id": 1,
+      "name": "Apple Airpods",
+      "img": "sensei.png",
+      "stock": 144,
+      "status": "active",
+      "price": 234.00,
+    }
+  ]
+   
+  }
