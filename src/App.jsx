@@ -19,21 +19,33 @@ function App() {
   
   const [users, setUsers] = useState([]);
 // fetch users
-  useEffect(() => {
-    const getUsers = async () => {
-      const usersFromServer = await fetchUsers();
-      setUsers(usersFromServer);
-    };
-    getUsers();
-  }, []);
+  // useEffect(() => {
+  //   const getUsers = async () => {
+  //     const usersFromServer = await fetchUsers();
+  //     setUsers(usersFromServer);
+  //   };
+  //   getUsers();
+  // }, []);
 
-  const fetchUsers = async () => {
-    const res = await fetch("http://localhost:5000/users");
-    const usersData = res.json();
-    // console.log(usersData);
-    return usersData
-  };
+  // const fetchUsers = async () => {
+  //   const res = await fetch("http://localhost:5000/users");
+  //   const usersData = res.json();
+  //   // console.log(usersData);
+  //   return usersData
+  // };
 
+  const getUsers = async ()=>{
+    try {
+      const fetchUsers = await fetch('http://localhost:5000/users')
+      const jsonUsers = await fetchUsers.json()
+      setUsers(jsonUsers)
+    } catch (err) {
+      console.error(err.message);
+    }
+  }
+  useEffect(()=>{
+    getUsers()
+  },[])
   console.log(users);
   
 
