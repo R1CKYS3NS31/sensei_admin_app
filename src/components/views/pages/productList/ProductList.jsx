@@ -1,17 +1,13 @@
-import { DataGrid } from '@material-ui/data-grid'
-import { DeleteOutline } from '@material-ui/icons';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './productList.css'
+import { DataGrid } from "@material-ui/data-grid";
+import { DeleteOutline } from "@material-ui/icons";
+import { Link } from "react-router-dom";
+import "./productList.css";
 
-export default function ProductList({rows}) {
-    
-    const [data, setData] = useState(rows)
-
+export default function ProductList({ products, deleteProduct }) {
+  // const [data, setData] = useState(rows)
 
   const handleDelete = (id) => {
-      console.log('hello');
-    setData(data.filter((item) => item.id !== id));
+    deleteProduct(id);
   };
 
   const columns = [
@@ -74,14 +70,14 @@ export default function ProductList({rows}) {
   ];
 
   return (
-    <div className='productList'>
-         <DataGrid
-        rows={data}
+    <div className="productList">
+      <DataGrid
+        rows={products}
         columns={columns}
-        pageSize={8}
+        // pageSize={8}
         checkboxSelection
         disableSelectionOnClick
       />
     </div>
-  )
+  );
 }

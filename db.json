@@ -15,14 +15,6 @@
       "stock": 144,
       "status": "active",
       "price": 234
-    },
-    {
-      "id": 3,
-      "name": "Apple Airpods",
-      "img": "sensei.png",
-      "stock": 144,
-      "status": "active",
-      "price": 234
     }
   ],
   "users": [

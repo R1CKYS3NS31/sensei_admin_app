@@ -2,15 +2,14 @@ import "./userList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
-export default function UserList({ users,deleteUser }) {
+export default function UserList({ users, deleteUser }) {
   // const [data, setData] = useState(users);
   // console.log(data);
 
   const handleDelete = (id) => {
     // setData(users.filter((item) => item.id !== id));
-    deleteUser(id)
+    deleteUser(id);
   };
 
   const columns = [
