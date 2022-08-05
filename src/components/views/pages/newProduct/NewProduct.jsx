@@ -46,11 +46,12 @@ export default function NewProduct({ newProduct, productImg }) {
     setselectedFile(event.target.files[0]);
 
     const formData = new FormData();
-    formData.append("imgFile", selectedFile);
+    formData.append("imgFile", selectedFile); // file will be accessed by imgFile
     productImg(formData);
 
     setImg(selectedFile.name);
-
+    // save locally
+   
     setIsSelected(true);
   };
 

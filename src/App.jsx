@@ -13,6 +13,7 @@ import Product from "./components/views/pages/product/Product";
 import NewProduct from "./components/views/pages/newProduct/NewProduct";
 import { useEffect, useState } from "react";
 
+
 function App() {
   const [users, setUsers] = useState([]);
   const [products, setProducts] = useState([]);
@@ -85,6 +86,8 @@ function App() {
       }
     );
     const productImgData = await res.formData;
+
+  
     prodImg(productImgData);
   };
 
