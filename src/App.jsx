@@ -16,9 +16,9 @@ import { useEffect, useState } from "react";
 
 function App() {
   // USERS
-  // fetch users
+  
   const [users, setUsers] = useState([]);
-
+// fetch users
   useEffect(() => {
     const getUsers = async () => {
       const usersFromServer = await fetchUsers();

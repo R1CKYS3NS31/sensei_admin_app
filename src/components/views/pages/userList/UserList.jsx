@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function UserList({ users }) {
   const [data, setData] = useState(users);
+  console.log(data);
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
@@ -76,7 +77,7 @@ export default function UserList({ users }) {
         className="userTable"
         rows={data}
         columns={columns}
-        pageSize={5}
+        // pageSize={5}
         checkboxSelection
         disableSelectionOnClick
       />
