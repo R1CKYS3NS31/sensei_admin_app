@@ -4,12 +4,13 @@ import { DeleteOutline } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function UserList({ users }) {
-  const [data, setData] = useState(users);
-  console.log(data);
+export default function UserList({ users,deleteUser }) {
+  // const [data, setData] = useState(users);
+  // console.log(data);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    // setData(users.filter((item) => item.id !== id));
+    deleteUser(id)
   };
 
   const columns = [
@@ -75,7 +76,7 @@ export default function UserList({ users }) {
     <div className="userList">
       <DataGrid
         className="userTable"
-        rows={data}
+        rows={users}
         columns={columns}
         // pageSize={5}
         checkboxSelection

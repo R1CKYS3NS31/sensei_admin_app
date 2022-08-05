@@ -6,23 +6,23 @@
       "img": "sensei.png",
       "stock": 144,
       "status": "active",
-      "price": 234.00
+      "price": 234
     },
     {
-      "id": 1,
+      "id": 2,
       "name": "Apple Airpods",
       "img": "sensei.png",
       "stock": 144,
       "status": "active",
-      "price": 234.00
+      "price": 234
     },
     {
-      "id": 1,
+      "id": 3,
       "name": "Apple Airpods",
       "img": "sensei.png",
       "stock": 144,
       "status": "active",
-      "price": 234.00
+      "price": 234
     }
   ],
   "users": [
@@ -49,31 +49,6 @@
       "email": "sensei@gmail.com",
       "status": "active",
       "transaction": "ksh. 234.00"
-    },
-    {
-      "id": 4,
-      "username": "Ricky Sensei",
-      "avatar": "sensei.png",
-      "email": "sensei@gmail.com",
-      "status": "active",
-      "transaction": "ksh. 234.00"
-    },
-    {
-      "id": 5,
-      "username": "Ricky Sensei",
-      "avatar": "sensei.png",
-      "email": "sensei@gmail.com",
-      "status": "active",
-      "transaction": "ksh. 234.00"
-    },
-    {
-      "id": 6,
-      "username": "Ricky Sensei",
-      "avatar": "sensei.png",
-      "email": "sensei@gmail.com",
-      "status": "active",
-      "transaction": "ksh. 234.00"
     }
-
   ]
 }

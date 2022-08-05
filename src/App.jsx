@@ -19,22 +19,7 @@ function App() {
   
   const [users, setUsers] = useState([]);
 // fetch users
-  // useEffect(() => {
-  //   const getUsers = async () => {
-  //     const usersFromServer = await fetchUsers();
-  //     setUsers(usersFromServer);
-  //   };
-  //   getUsers();
-  // }, []);
-
-  // const fetchUsers = async () => {
-  //   const res = await fetch("http://localhost:5000/users");
-  //   const usersData = res.json();
-  //   // console.log(usersData);
-  //   return usersData
-  // };
-
-  const getUsers = async ()=>{
+   const getUsers = async ()=>{
     try {
       const fetchUsers = await fetch('http://localhost:5000/users')
       const jsonUsers = await fetchUsers.json()
@@ -46,8 +31,15 @@ function App() {
   useEffect(()=>{
     getUsers()
   },[])
-  console.log(users);
-  
+  // console.log(users);
+
+  // delete users
+  const deleteUser = async (id)=>{
+    await fetch(`http://localhost:5000/users/${id}`,{
+      method:'DELETE',
+    })
+    setUsers(users.filter((users)=>users.id!==id))
+  }
 
   return (
     <Router>
@@ -60,7 +52,7 @@ function App() {
           </Route>
           {/* user */}
           <Route path={"/users"}>
-            <UserList users={users} />
+            <UserList users={users} deleteUser = {deleteUser}/>
           </Route>
           <Route path={"/newUser"}>
             <NewUser />
