@@ -70,14 +70,19 @@ export default function ProductList({ products, deleteProduct }) {
   ];
 
   return (
-    <div className="productList">
-      <DataGrid
-        rows={products}
-        columns={columns}
-        // pageSize={8}
-        checkboxSelection
-        disableSelectionOnClick
-      />
-    </div>
+    <>
+      <Link to={"/newproduct"}>
+        <button className="productAddButton">Create</button>
+      </Link>
+      <div className="productList">
+        <DataGrid
+          rows={products}
+          columns={columns}
+          // pageSize={8}
+          checkboxSelection
+          disableSelectionOnClick
+        />
+      </div>
+    </>
   );
 }
