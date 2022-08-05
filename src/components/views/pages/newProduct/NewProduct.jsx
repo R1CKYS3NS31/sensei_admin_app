@@ -1,7 +1,8 @@
+import { upload } from "@testing-library/user-event/dist/upload";
 import { useState } from "react";
 import "./newProduct.css";
 
-export default function NewProduct({ newProduct }) {
+export default function NewProduct({ newProduct, productImg }) {
   const [name, setName] = useState("");
   const [img, setImg] = useState("sensei.png");
   const [stock, setStock] = useState(0);
@@ -40,15 +41,19 @@ export default function NewProduct({ newProduct }) {
       value: "Out of stock",
     },
   ];
-// image handle
-const imgUpload = (event)=>{
-    setselectedFile(event.target.files[0])
-    
-    const formData = new FormData()
-    formData.append('imgFile',selectedFile)
-    setImg(selectedFile.name,formData)
-    setIsSelected(true)
-}
+  // image handle
+  const imgUpload = (event) => {
+    setselectedFile(event.target.files[0]);
+
+    const formData = new FormData();
+    formData.append("imgFile", selectedFile);
+    productImg(formData);
+
+    setImg(selectedFile.name);
+
+    setIsSelected(true);
+  };
+
   return (
     <div className="newProduct">
       <h1 className="addProductTitle">New Product</h1>

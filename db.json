@@ -91,6 +91,17 @@
       },
       "price": "870",
       "id": 28
+    },
+    {
+      "name": "kiatu",
+      "img": {
+        "name": "riky.png",
+        "formData": {}
+      },
+      "stock": "e334",
+      "status": "",
+      "price": "6667",
+      "id": 29
     }
   ],
   "users": [

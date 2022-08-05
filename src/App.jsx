@@ -14,8 +14,11 @@ import NewProduct from "./components/views/pages/newProduct/NewProduct";
 import { useEffect, useState } from "react";
 
 function App() {
-  // USERS
   const [users, setUsers] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [prodImg, setProdImg] = useState();
+  // USERS
+
   // fetch users
   const getUsers = async () => {
     try {
@@ -39,7 +42,6 @@ function App() {
     setUsers(users.filter((users) => users.id !== id));
   };
   // PRODUCTS
-  const [products, setProducts] = useState([]);
   // fetch products
   const getProducts = async () => {
     try {
@@ -69,8 +71,21 @@ function App() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(product),
     });
-    const productdata = await res.json()
-    setProducts([...products,productdata])
+    const productdata = await res.json();
+    setProducts([...products, productdata]);
+  };
+  const productImg = async (proImg) => {
+    const res = await fetch(
+      "http://localhost:5000/api/file/productimage",
+      proImg,
+      {
+        headers: {
+          "content-type": "multipart/form-data",
+        },
+      }
+    );
+    const productImgData = await res.formData;
+    prodImg(productImgData);
   };
 
   return (
@@ -97,7 +112,7 @@ function App() {
             <ProductList products={products} deleteProduct={deleteProduct} />
           </Route>
           <Route path={"/newProduct"}>
-            <NewProduct newProduct = {newProduct}/>
+            <NewProduct newProduct={newProduct} productImg={productImg} />
           </Route>
           <Route path={"/product/:productId"}>
             <Product />
