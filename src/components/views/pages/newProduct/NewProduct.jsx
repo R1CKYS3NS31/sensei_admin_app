@@ -1,12 +1,15 @@
 import { useState } from "react";
 import "./newProduct.css";
 
-export default function NewProduct({ addProduct }) {
+export default function NewProduct({ newProduct }) {
   const [name, setName] = useState("");
   const [img, setImg] = useState("sensei.png");
   const [stock, setStock] = useState(0);
   const [status, setStatus] = useState("");
   const [price, setPrice] = useState(0.0);
+  const [isSelected, setIsSelected] = useState(false);
+  const [selectedFile, setselectedFile] = useState();
+  const [isFilePicked, setisFilePicked] = useState(false);
 
   //   submit handle
   const onSubmit = (e) => {
@@ -16,7 +19,7 @@ export default function NewProduct({ addProduct }) {
       alert("Please a Product!");
       return;
     }
-    addProduct({ name, img, stock, status, price });
+    newProduct({ name, img, stock, status, price });
     setName("");
     setImg("sensei.png");
     setStock(0);
@@ -26,26 +29,52 @@ export default function NewProduct({ addProduct }) {
 
   const options = [
     {
-      label: "Yes",
+      label: "On stock",
 
-      value: "Yes",
+      value: "On stock",
     },
 
     {
-      label: "No",
+      label: "Out of stock",
 
-      value: "No",
+      value: "Out of stock",
     },
   ];
-
+// image handle
+const imgUpload = (event)=>{
+    setselectedFile(event.target.files[0])
+    
+    const formData = new FormData()
+    formData.append('imgFile',selectedFile)
+    setImg(selectedFile.name,formData)
+    setIsSelected(true)
+}
   return (
     <div className="newProduct">
       <h1 className="addProductTitle">New Product</h1>
       <form className="addProductForm" onSubmit={onSubmit}>
+        {/* image upload */}
         <div className="addProductItem">
           <label htmlFor="image">Image</label>
-          <input type="file" id="file" />
+          <input type="file" id="file" onChange={imgUpload} />
         </div>
+        {isSelected ? (
+          <div>
+            <p>Filename: {selectedFile.name}</p>
+
+            <p>Filetype: {selectedFile.type}</p>
+
+            <p>Size in bytes: {selectedFile.size}</p>
+
+            {/* <p>
+              lastModifiedDate:{" "}
+              {selectedFile.lastModifiedDate.toLocaleDateString()}
+            </p> */}
+          </div>
+        ) : (
+          <p>Select Product image</p>
+        )}
+
         <div className="addProductItem">
           <label htmlFor="name">Name</label>
           <input
@@ -79,15 +108,22 @@ export default function NewProduct({ addProduct }) {
         </div>
         <div className="addProductItem">
           <label htmlFor="status">Status</label>
-          <select name="status" id="status" onChange={(e) => e.target.value}>
-            {options.map((option)=>(
-                <option value={option.value}>{option.label}</option>
+          <select
+            name="status"
+            id="status"
+            onChange={(e) => setStatus({ status: e.target.value })}
+          >
+            {options.map((option) => (
+              <option value={option.value}>{option.label}</option>
             ))}
-            
           </select>
         </div>
-        
-        <input type="submit" value={'Add product'} className="addProductButton"/>
+
+        <input
+          type="submit"
+          value={"Add product"}
+          className="addProductButton"
+        />
       </form>
     </div>
   );

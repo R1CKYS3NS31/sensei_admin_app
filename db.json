@@ -15,6 +15,82 @@
       "stock": 144,
       "status": "active",
       "price": 234
+    },
+    {
+      "name": "juice",
+      "img": "sensei.png",
+      "stock": "245",
+      "status": "",
+      "price": "90.00",
+      "id": 3
+    },
+    {
+      "name": "maji",
+      "img": "sensei.png",
+      "stock": "876",
+      "status": "",
+      "price": "86.51",
+      "id": 21
+    },
+    {
+      "name": "cake",
+      "img": "sensei.png",
+      "stock": "780",
+      "status": "",
+      "price": "98",
+      "id": 22
+    },
+    {
+      "name": "juo",
+      "img": "sensei.png",
+      "stock": 0,
+      "status": "",
+      "price": 0,
+      "id": 23
+    },
+    {
+      "name": "kuku",
+      "img": "sensei.png",
+      "stock": "8877",
+      "status": "",
+      "price": "999.00",
+      "id": 24
+    },
+    {
+      "name": "bata",
+      "img": "sensei.png",
+      "stock": "86666",
+      "status": "",
+      "price": "889.0",
+      "id": 25
+    },
+    {
+      "name": "matunda",
+      "img": "sensei.png",
+      "stock": "2345",
+      "status": {
+        "status": "On stock"
+      },
+      "price": "5.00",
+      "id": 26
+    },
+    {
+      "name": "maziwa",
+      "img": "sensei.png",
+      "stock": "56",
+      "status": "",
+      "price": "60.00",
+      "id": 27
+    },
+    {
+      "name": "Phone",
+      "img": "riky.png",
+      "stock": "7788",
+      "status": {
+        "status": "Out of stock"
+      },
+      "price": "870",
+      "id": 28
     }
   ],
   "users": [

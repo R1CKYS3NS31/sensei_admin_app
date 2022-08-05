@@ -63,7 +63,7 @@ function App() {
     setProducts(products.filter((products) => products.id !== id));
   };
   // new product
-  const addProduct = async (product) => {
+  const newProduct = async (product) => {
     const res = await fetch("http://localhost:5000/products/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -97,7 +97,7 @@ function App() {
             <ProductList products={products} deleteProduct={deleteProduct} />
           </Route>
           <Route path={"/newProduct"}>
-            <NewProduct newProduct = {addProduct}/>
+            <NewProduct newProduct = {newProduct}/>
           </Route>
           <Route path={"/product/:productId"}>
             <Product />
