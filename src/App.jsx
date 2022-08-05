@@ -13,11 +13,10 @@ import Product from "./components/views/pages/product/Product";
 import NewProduct from "./components/views/pages/newProduct/NewProduct";
 import { useEffect, useState } from "react";
 
-
 function App() {
   const [users, setUsers] = useState([]);
   const [products, setProducts] = useState([]);
-  const [prodImg, setProdImg] = useState();
+
   // USERS
 
   // fetch users
@@ -76,19 +75,24 @@ function App() {
     setProducts([...products, productdata]);
   };
   const productImg = async (proImg) => {
-    const res = await fetch(
-      "http://localhost:5000/api/file/productimage",
-      proImg,
-      {
-        headers: {
-          "content-type": "multipart/form-data",
-        },
-      }
-    );
-    const productImgData = await res.formData;
-
-  
-    prodImg(productImgData);
+    try {
+      const res = await fetch(
+        "http://localhost:5000/api/file/productimage",
+        // "https://freeimage.host/api/1/upload/?key=6d207e02198a847aa98d0a2a901485a5",
+        // proImg,
+        {
+          method: "POST",
+          headers: {
+            "content-type": "multipart/form-data",
+          },
+          body: proImg,
+        }
+      );
+      // const productImgData = await res.response.json();
+      // console.log("success: " + productImgData);
+    } catch (err) {
+      console.error("Unsuccessfull: " + err.message);
+    }
   };
 
   return (

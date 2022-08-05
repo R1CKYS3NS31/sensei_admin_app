@@ -1,4 +1,3 @@
-import { upload } from "@testing-library/user-event/dist/upload";
 import { useState } from "react";
 import "./newProduct.css";
 
@@ -10,7 +9,7 @@ export default function NewProduct({ newProduct, productImg }) {
   const [price, setPrice] = useState(0.0);
   const [isSelected, setIsSelected] = useState(false);
   const [selectedFile, setselectedFile] = useState();
-  const [isFilePicked, setisFilePicked] = useState(false);
+  
 
   //   submit handle
   const onSubmit = (e) => {
@@ -42,15 +41,18 @@ export default function NewProduct({ newProduct, productImg }) {
     },
   ];
   // image handle
-  const imgUpload = (event) => {
+  const imgUpload = async (event) => {
     setselectedFile(event.target.files[0]);
 
     const formData = new FormData();
     formData.append("imgFile", selectedFile); // file will be accessed by imgFile
     productImg(formData);
 
-    setImg(selectedFile.name);
+    setImg( await selectedFile.name);
     // save locally
+    if (selectedFile.type!=='image/png') {
+        setIsSelected(false);
+    }
    
     setIsSelected(true);
   };
@@ -119,8 +121,8 @@ export default function NewProduct({ newProduct, productImg }) {
             id="status"
             onChange={(e) => setStatus({ status: e.target.value })}
           >
-            {options.map((option) => (
-              <option value={option.value}>{option.label}</option>
+            {options.map((option,index) => (
+              <option key={index} value={option.value}>{option.label}</option>
             ))}
           </select>
         </div>
