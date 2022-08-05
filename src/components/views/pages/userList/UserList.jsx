@@ -4,8 +4,8 @@ import { DeleteOutline } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function UserList({ rows }) {
-  const [data, setData] = useState(rows);
+export default function UserList({ users }) {
+  const [data, setData] = useState(users);
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));

@@ -86,7 +86,7 @@ intead of latest one for Switch to work
 
 ### Serve
 ```
-$ npmi i serve --save 
+$ npmi i json-server --save 
 ```
 create db.json
 

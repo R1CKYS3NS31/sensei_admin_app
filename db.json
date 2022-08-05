@@ -6,7 +6,7 @@
       "img": "sensei.png",
       "stock": 144,
       "status": "active",
-      "price": 234.00,
+      "price": 234.00
     },
     {
       "id": 1,
@@ -14,7 +14,7 @@
       "img": "sensei.png",
       "stock": 144,
       "status": "active",
-      "price": 234.00,
+      "price": 234.00
     },
     {
       "id": 1,
@@ -22,8 +22,33 @@
       "img": "sensei.png",
       "stock": 144,
       "status": "active",
-      "price": 234.00,
+      "price": 234.00
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Ricky Sensei",
+      "avatar": "sensei.png",
+      "email": "sensei@gmail.com",
+      "status": "active",
+      "transaction": "ksh. 234.00"
+    },
+    {
+      "id": 1,
+      "username": "Ricky Sensei",
+      "avatar": "sensei.png",
+      "email": "sensei@gmail.com",
+      "status": "active",
+      "transaction": "ksh. 234.00"
+    },
+    {
+      "id": 1,
+      "username": "Ricky Sensei",
+      "avatar": "sensei.png",
+      "email": "sensei@gmail.com",
+      "status": "active",
+      "transaction": "ksh. 234.00"
     }
   ]
-   
-  }
+}
