@@ -31,37 +31,47 @@ function App() {
   }, []);
   // console.log(users);
 
-  // delete users
+  // delete user
   const deleteUser = async (id) => {
     await fetch(`http://localhost:5000/users/${id}`, {
       method: "DELETE",
     });
     setUsers(users.filter((users) => users.id !== id));
   };
-   // PRODUCTS
-   const [products, setProducts] = useState([]);
-   // fetch users
-   const getProducts = async () => {
-     try {
-       const fetchProducts = await fetch("http://localhost:5000/products");
-       const jsonProducts = await fetchProducts.json();
-       setProducts(jsonProducts);
-     } catch (err) {
-       console.error(err.message);
-     }
-   };
-   useEffect(() => {
-     getProducts();
-   }, []);
-   // console.log(users);
- 
-   // delete users
-   const deleteProduct = async (id) => {
-     await fetch(`http://localhost:5000/products/${id}`, {
-       method: "DELETE",
-     });
-     setProducts(products.filter((products) => products.id !== id));
-   };
+  // PRODUCTS
+  const [products, setProducts] = useState([]);
+  // fetch products
+  const getProducts = async () => {
+    try {
+      const fetchProducts = await fetch("http://localhost:5000/products");
+      const jsonProducts = await fetchProducts.json();
+      setProducts(jsonProducts);
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+  useEffect(() => {
+    getProducts();
+  }, []);
+  // console.log(users);
+
+  // delete product
+  const deleteProduct = async (id) => {
+    await fetch(`http://localhost:5000/products/${id}`, {
+      method: "DELETE",
+    });
+    setProducts(products.filter((products) => products.id !== id));
+  };
+  // new product
+  const addProduct = async (product) => {
+    const res = await fetch("http://localhost:5000/products/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(product),
+    });
+    const productdata = await res.json()
+    setProducts([...products,productdata])
+  };
 
   return (
     <Router>
@@ -84,10 +94,10 @@ function App() {
           </Route>
           {/* product */}
           <Route path={"/products"}>
-            <ProductList products={products} deleteProduct = {deleteProduct} />
+            <ProductList products={products} deleteProduct={deleteProduct} />
           </Route>
           <Route path={"/newProduct"}>
-            <NewProduct />
+            <NewProduct newProduct = {addProduct}/>
           </Route>
           <Route path={"/product/:productId"}>
             <Product />
