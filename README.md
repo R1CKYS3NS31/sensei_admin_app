@@ -97,5 +97,5 @@ save in package.json
  
 start server
 ```
-node serve
+npm run serve
 ```
